@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบสอบถามการใช้เทคโนโลยี</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .rating {
+            display: flex;
+            justify-content: space-between;
+            max-width: 300px;
+            margin: auto;
+        }
+
+        .rating input {
+            margin: 0 5px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>แบบสอบถามการใช้เทคโนโลยี</h1>
+            <h2 style="font-size: small;" >1 = น้อยที่สุด, 5 = มากที่สุด</h2>
+        <form id="surveyForm">
+            <!-- Questions 1 to 30 -->
+            <div class="question">
+                <label for="q1">1. คุณมักรู้สึกว่าต้องเช็คโทรศัพท์หรือคอมพิวเตอร์ทันทีที่มีการแจ้งเตือนหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q1" value="1"> 1
+                    <input type="radio" name="q1" value="2"> 2
+                    <input type="radio" name="q1" value="3"> 3
+                    <input type="radio" name="q1" value="4"> 4
+                    <input type="radio" name="q1" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q2">2. คุณเคยรู้สึกเครียดหรือกังวลเมื่อไม่ได้ใช้โทรศัพท์หรือคอมพิวเตอร์หรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q2" value="1"> 1
+                    <input type="radio" name="q2" value="2"> 2
+                    <input type="radio" name="q2" value="3"> 3
+                    <input type="radio" name="q2" value="4"> 4
+                    <input type="radio" name="q2" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q3">3. คุณใช้เวลามากกว่าที่ตั้งใจไว้ในการใช้งานโซเชียลมีเดียบ่อยแค่ไหน?</label>
+                <div class="rating">
+                    <input type="radio" name="q3" value="1"> 1
+                    <input type="radio" name="q3" value="2"> 2
+                    <input type="radio" name="q3" value="3"> 3
+                    <input type="radio" name="q3" value="4"> 4
+                    <input type="radio" name="q3" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q4">4. คุณรู้สึกว่าเทคโนโลยีมีผลกระทบต่อการนอนหลับของคุณอย่างไร?</label>
+                <div class="rating">
+                    <input type="radio" name="q4" value="1"> 1
+                    <input type="radio" name="q4" value="2"> 2
+                    <input type="radio" name="q4" value="3"> 3
+                    <input type="radio" name="q4" value="4"> 4
+                    <input type="radio" name="q4" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q5">5. คุณรู้สึกว่าคุณสามารถหยุดใช้อุปกรณ์อิเล็กทรอนิกส์ได้ง่ายดายหรือไม่เมื่อคุณต้องการทำสิ่งอื่นๆ?</label>
+                <div class="rating">
+                    <input type="radio" name="q5" value="1"> 1
+                    <input type="radio" name="q5" value="2"> 2
+                    <input type="radio" name="q5" value="3"> 3
+                    <input type="radio" name="q5" value="4"> 4
+                    <input type="radio" name="q5" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q6">6. คุณมักรู้สึกเสียใจหรือผิดหวังกับตัวเองหลังจากใช้เวลานานในการเล่นเกมหรือดูวิดีโอออนไลน์หรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q6" value="1"> 1
+                    <input type="radio" name="q6" value="2"> 2
+                    <input type="radio" name="q6" value="3"> 3
+                    <input type="radio" name="q6" value="4"> 4
+                    <input type="radio" name="q6" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q7">7. คุณรู้สึกว่าสมาธิในการทำงานหรือการเรียนของคุณลดลงเนื่องจากการใช้เทคโนโลยีหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q7" value="1"> 1
+                    <input type="radio" name="q7" value="2"> 2
+                    <input type="radio" name="q7" value="3"> 3
+                    <input type="radio" name="q7" value="4"> 4
+                    <input type="radio" name="q7" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q8">8. คุณมักจะตรวจสอบอีเมล์หรือข้อความทันทีที่ได้รับการแจ้งเตือนหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q8" value="1"> 1
+                    <input type="radio" name="q8" value="2"> 2
+                    <input type="radio" name="q8" value="3"> 3
+                    <input type="radio" name="q8" value="4"> 4
+                    <input type="radio" name="q8" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q9">9. คุณรู้สึกว่าสมองของคุณเหนื่อยล้าหลังจากการใช้เทคโนโลยีเป็นเวลานานหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q9" value="1"> 1
+                    <input type="radio" name="q9" value="2"> 2
+                    <input type="radio" name="q9" value="3"> 3
+                    <input type="radio" name="q9" value="4"> 4
+                    <input type="radio" name="q9" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q10">10. คุณมีการวางแผนการใช้เวลาหน้าจอของคุณอย่างมีประสิทธิภาพหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q10" value="1"> 1
+                    <input type="radio" name="q10" value="2"> 2
+                    <input type="radio" name="q10" value="3"> 3
+                    <input type="radio" name="q10" value="4"> 4
+                    <input type="radio" name="q10" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q11">11. คุณรู้สึกว่าการใช้เทคโนโลยีทำให้คุณห่างเหินจากครอบครัวหรือเพื่อนฝูงหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q11" value="1"> 1
+                    <input type="radio" name="q11" value="2"> 2
+                    <input type="radio" name="q11" value="3"> 3
+                    <input type="radio" name="q11" value="4"> 4
+                    <input type="radio" name="q11" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q12">12. คุณมีการพักสายตาเป็นประจำระหว่างการใช้เทคโนโลยีหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q12" value="1"> 1
+                    <input type="radio" name="q12" value="2"> 2
+                    <input type="radio" name="q12" value="3"> 3
+                    <input type="radio" name="q12" value="4"> 4
+                    <input type="radio" name="q12" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q13">13. คุณรู้สึกว่าคุณมีการใช้เทคโนโลยีอย่างมีสติและรู้ตัวหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q13" value="1"> 1
+                    <input type="radio" name="q13" value="2"> 2
+                    <input type="radio" name="q13" value="3"> 3
+                    <input type="radio" name="q13" value="4"> 4
+                    <input type="radio" name="q13" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q14">14. คุณรู้สึกว่าคุณต้องการปรับปรุงการใช้เทคโนโลยีในชีวิตประจำวันหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q14" value="1"> 1
+                    <input type="radio" name="q14" value="2"> 2
+                    <input type="radio" name="q14" value="3"> 3
+                    <input type="radio" name="q14" value="4"> 4
+                    <input type="radio" name="q14" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q15">15. คุณสามารถควบคุมการใช้เทคโนโลยีของคุณได้ดีแค่ไหน?</label>
+                <div class="rating">
+                    <input type="radio" name="q15" value="1"> 1
+                    <input type="radio" name="q15" value="2"> 2
+                    <input type="radio" name="q15" value="3"> 3
+                    <input type="radio" name="q15" value="4"> 4
+                    <input type="radio" name="q15" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q16">16. คุณมักใช้เทคโนโลยีในการหลีกหนีจากปัญหาหรือความเครียดในชีวิตประจำวันหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q16" value="1"> 1
+                    <input type="radio" name="q16" value="2"> 2
+                    <input type="radio" name="q16" value="3"> 3
+                    <input type="radio" name="q16" value="4"> 4
+                    <input type="radio" name="q16" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q17">17. คุณรู้สึกว่าคุณใช้เวลาหน้าจอมากขึ้นเรื่อยๆ เมื่อเวลาผ่านไปหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q17" value="1"> 1
+                    <input type="radio" name="q17" value="2"> 2
+                    <input type="radio" name="q17" value="3"> 3
+                    <input type="radio" name="q17" value="4"> 4
+                    <input type="radio" name="q17" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q18">18. คุณสามารถควบคุมการใช้แอปพลิเคชันต่าง ๆ ที่คุณติดอยู่ได้หรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q18" value="1"> 1
+                    <input type="radio" name="q18" value="2"> 2
+                    <input type="radio" name="q18" value="3"> 3
+                    <input type="radio" name="q18" value="4"> 4
+                    <input type="radio" name="q18" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q19">19. คุณรู้สึกว่าการใช้เทคโนโลยีทำให้คุณไม่มีเวลาออกกำลังกายหรือทำกิจกรรมกลางแจ้งหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q19" value="1"> 1
+                    <input type="radio" name="q19" value="2"> 2
+                    <input type="radio" name="q19" value="3"> 3
+                    <input type="radio" name="q19" value="4"> 4
+                    <input type="radio" name="q19" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q20">20. คุณสามารถปิดการแจ้งเตือนจากอุปกรณ์ของคุณได้ง่ายดายหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q20" value="1"> 1
+                    <input type="radio" name="q20" value="2"> 2
+                    <input type="radio" name="q20" value="3"> 3
+                    <input type="radio" name="q20" value="4"> 4
+                    <input type="radio" name="q20" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q21">21. คุณรู้สึกว่าการใช้เทคโนโลยีทำให้คุณไม่มีเวลาทำกิจกรรมที่คุณรักหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q21" value="1"> 1
+                    <input type="radio" name="q21" value="2"> 2
+                    <input type="radio" name="q21" value="3"> 3
+                    <input type="radio" name="q21" value="4"> 4
+                    <input type="radio" name="q21" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q22">22. คุณมีการพักผ่อนโดยไม่ใช้เทคโนโลยีบ้างหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q22" value="1"> 1
+                    <input type="radio" name="q22" value="2"> 2
+                    <input type="radio" name="q22" value="3"> 3
+                    <input type="radio" name="q22" value="4"> 4
+                    <input type="radio" name="q22" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q23">23. คุณเคยรู้สึกผิดหรือละอายใจจากการใช้เทคโนโลยีมากเกินไปหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q23" value="1"> 1
+                    <input type="radio" name="q23" value="2"> 2
+                    <input type="radio" name="q23" value="3"> 3
+                    <input type="radio" name="q23" value="4"> 4
+                    <input type="radio" name="q23" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q24">24. คุณสามารถหยุดใช้เทคโนโลยีได้เมื่อคุณรู้สึกว่ามากเกินไปหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q24" value="1"> 1
+                    <input type="radio" name="q24" value="2"> 2
+                    <input type="radio" name="q24" value="3"> 3
+                    <input type="radio" name="q24" value="4"> 4
+                    <input type="radio" name="q24" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q25">25. คุณใช้เทคโนโลยีในช่วงเวลาที่ควรพักผ่อน เช่น เวลากินข้าวหรือก่อนนอนหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q25" value="1"> 1
+                    <input type="radio" name="q25" value="2"> 2
+                    <input type="radio" name="q25" value="3"> 3
+                    <input type="radio" name="q25" value="4"> 4
+                    <input type="radio" name="q25" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q26">26. คุณรู้สึกว่าการใช้เทคโนโลยีทำให้คุณไม่มีเวลาพบปะพูดคุยกับเพื่อนฝูงหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q26" value="1"> 1
+                    <input type="radio" name="q26" value="2"> 2
+                    <input type="radio" name="q26" value="3"> 3
+                    <input type="radio" name="q26" value="4"> 4
+                    <input type="radio" name="q26" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q27">27. คุณมีการวางแผนการใช้เทคโนโลยีของคุณล่วงหน้าหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q27" value="1"> 1
+                    <input type="radio" name="q27" value="2"> 2
+                    <input type="radio" name="q27" value="3"> 3
+                    <input type="radio" name="q27" value="4"> 4
+                    <input type="radio" name="q27" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q28">28. คุณรู้สึกว่าการใช้เทคโนโลยีทำให้คุณพลาดโอกาสในชีวิตจริงหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q28" value="1"> 1
+                    <input type="radio" name="q28" value="2"> 2
+                    <input type="radio" name="q28" value="3"> 3
+                    <input type="radio" name="q28" value="4"> 4
+                    <input type="radio" name="q28" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q29">29. คุณสามารถปิดอุปกรณ์ของคุณได้โดยไม่รู้สึกกระวนกระวายหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q29" value="1"> 1
+                    <input type="radio" name="q29" value="2"> 2
+                    <input type="radio" name="q29" value="3"> 3
+                    <input type="radio" name="q29" value="4"> 4
+                    <input type="radio" name="q29" value="5"> 5
+                </div>
+            </div>
+            <div class="question">
+                <label for="q30">30. คุณรู้สึกว่าคุณมีการใช้เทคโนโลยีอย่างสมดุลหรือไม่?</label>
+                <div class="rating">
+                    <input type="radio" name="q30" value="1"> 1
+                    <input type="radio" name="q30" value="2"> 2
+                    <input type="radio" name="q30" value="3"> 3
+                    <input type="radio" name="q30" value="4"> 4
+                    <input type="radio" name="q30" value="5"> 5
+                </div>
+            </div>
+
+            <!-- Repeat for all questions until q30 -->
+            <!-- Adding more questions in the same format -->
+            <!-- Use JavaScript to generate more questions or manually add similar blocks for q3 to q30 -->
+
+            <button type="button" onclick="calculateResult()">ส่งคำตอบ</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script>
+        function calculateResult() {
+            const form = document.getElementById('surveyForm');
+            const formData = new FormData(form);
+            const answers = Array.from(formData.values()).map(Number);
+
+            if (answers.length < 30) {
+                alert('กรุณาตอบคำถามให้ครบทุกข้อ');
+                return;
+            }
+
+            const group1Questions = [1, 3, 6, 11, 14, 17, 19, 21, 23, 25, 28];
+            const group2Questions = [2, 4, 7, 9, 13, 16, 18, 22, 24, 26, 29];
+            const group3Questions = [5, 8, 10, 12, 15, 20, 27, 30];
+
+            const group1Score = group1Questions.map(q => answers[q - 1]).reduce((a, b) => a + b, 0) / group1Questions.length;
+            const group2Score = group2Questions.map(q => answers[q - 1]).reduce((a, b) => a + b, 0) / group2Questions.length;
+            const group3Score = group3Questions.map(q => answers[q - 1]).reduce((a, b) => a + b, 0) / group3Questions.length;
+
+            let resultText = '';
+
+            if (group1Score > 4) {
+                resultText = 'คุณควรทำ Digital Detox';
+            } else if (group2Score > 4) {
+                resultText = 'คุณขาด Digital Mindfulness';
+            } else if (group3Score > 4) {
+                resultText = 'คุณควรทำ Digital Screen Time';
+            } else {
+                resultText = 'การใช้เทคโนโลยีของคุณอยู่ในเกณฑ์ปกติ';
+            }
+
+            document.getElementById('result').innerText = resultText;
+        }
+    </script>
+</body>
+</html>
